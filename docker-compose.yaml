@@ -1,0 +1,6 @@
+services:
+  rdesktop:
+    image: danb0b/micropython
+    ports: 
+    - 5000:5000
+    command: bash -c "sleep infinity"
