@@ -9,5 +9,5 @@ RUN make submodules
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt install -y python3
 RUN make
-#RUN make install
-EXPOSE 5000 80 8080
+RUN make install
+EXPOSE 5000
