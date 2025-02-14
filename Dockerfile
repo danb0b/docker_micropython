@@ -11,3 +11,5 @@ WORKDIR ports/unix
 RUN make submodules && make && make install
 
 EXPOSE 5000
+workdir /code
+ENTRYPOINT [ "micropython" ]

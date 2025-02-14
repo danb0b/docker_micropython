@@ -1,6 +1,11 @@
 services:
-  rdesktop:
+  micropython:
     image: danb0b/micropython
     ports:
     - 5000:5000
-    command: bash -c "sleep infinity"
+    volumes:
+      - ./code:/code
+    entrypoint: micropython
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+#    command: bash -c "sleep infinity"
