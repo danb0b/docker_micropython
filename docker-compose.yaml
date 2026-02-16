@@ -1,10 +1,13 @@
 services:
   micropython:
     image: danb0b/micropython
+    container_name: micropython
+    hostname: micropython
     ports:
     - 5000:5000
     volumes:
       - ./code:/code
+      - ./micropython:/root/.micropython
     entrypoint: micropython
     stdin_open: true # docker run -i
     tty: true        # docker run -t
