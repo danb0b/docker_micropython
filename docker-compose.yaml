@@ -6,7 +6,7 @@ services:
     ports:
     - 5000:5000
     volumes:
-      - ./code:/code
+      - /home/danaukes/repos/code/code_esp32_servo_gaits:/code
       - ./micropython:/root/.micropython
     entrypoint: micropython
     stdin_open: true # docker run -i
