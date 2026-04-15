@@ -12,4 +12,4 @@ RUN make submodules && make && make install
 
 EXPOSE 5000
 WORKDIR /code
-ENTRYPOINT [ "micropython" ]
+# ENTRYPOINT [ "/bin/bash" ]

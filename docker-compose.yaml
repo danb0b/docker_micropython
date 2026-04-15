@@ -5,7 +5,10 @@ services:
     - 5000:5000
     volumes:
       - ./code:/code
-    entrypoint: micropython
+    working_dir: /code
+    # entrypoint: micropython
+    # entrypoint: /bin/bash
+    # command: main.py
     stdin_open: true # docker run -i
     tty: true        # docker run -t
-#    command: bash -c "sleep infinity"
+    command: bash -c "micropython boot.py; micropython main.py"
